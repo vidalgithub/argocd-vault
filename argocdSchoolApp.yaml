@@ -9,7 +9,7 @@ spec:
     server: 'https://kubernetes.default.svc'
   source:
     path: schoolapp-subchart
-    repoURL: 'https://github.com/samgabrail/argocd-vault.git'
+    repoURL: 'https://github.com/vidalgithub/argocd-vault.git'
     targetRevision: HEAD
   project: default
   syncPolicy:
