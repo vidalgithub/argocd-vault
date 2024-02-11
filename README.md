@@ -23,6 +23,7 @@ kubectl -n schoolapp port-forward service/api 5000:5000
 ```
 ## Test the School App
 From a browser, go to http://127.0.0.1:8001
+
 ## ArgoCD Setup
 Now let's get ArgoCD ready for our school app.
 ## Install ArgoCD
@@ -73,7 +74,7 @@ kubectl port-forward service/api 5000:5000 -n schoolapp
 ## Test the School App with Hardcoded Secrets
 Try creating and deleting a course and check the logs of the api pod.
 ```bash
-kubectl logs -n schoolapp -f $(kubectl get pods --template '{{range .items}}{{.metadata.name}}{{end}}' --selector=app=api) -c api
+kubectl logs -n schoolapp -f $(kubectl get pods --template '{{range .items}}{{.metadata.name}}{{end}}' --selector=app=api) -c api | grep -i username -A1 -B1
 ```
 Notice this output:
 Expected Output

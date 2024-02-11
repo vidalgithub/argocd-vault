@@ -15,6 +15,8 @@ alias kgn="kubectl get all --all-namespaces"
 alias kdel="kubectl delete"
 alias kd="kubectl describe"
 alias kg="kubectl get"
+alias kb="kubens"
+alias ktx="kubectx"
 
 echo 'alias k="kubectl"' >> /home/$USER/.bashrc
 echo 'alias kga="kubectl get all"' >> /home/$USER/.bashrc
