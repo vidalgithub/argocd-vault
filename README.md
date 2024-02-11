@@ -105,7 +105,7 @@ Then run these commands
 vault operator init -key-shares=1 -key-threshold=1
 vault operator unseal <UNSEAL_KEY>
 # Example:
-vault operator unseal ox7fCUNO52KptEPJkycF1miOI28pZEUWQQms5kLkgCY=
+vault operator unseal Zgd2fgadehVBJOy5FzERghe5MAyhom7wby8k8ZK+458=
 ```
 ## Prepare Vault for the School App
 Let's prepare Vault to serve the MongoDB credentials to the API.
@@ -116,7 +116,7 @@ Let's now log in to Vault (while still inside the vault container)
 export VAULT_ADDR=http://127.0.0.1:8200
 vault login <ROOT_TOKEN>
 # Example:
-vault login s.SBGKz0bx4USd6k4ExuhLUjYC
+vault login hvs.LxqP0KrJAuLRyA38vrezqa2U
 ```
 ## Add mongoDB Credentials
 We will add a static KV secret for the school app. This secret is the mongoDB credentials so that the API could connect to mongoDB.
